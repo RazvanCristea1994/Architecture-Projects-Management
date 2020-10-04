@@ -1,0 +1,5 @@
+{"title":"Project One","releaseYear":2000,"price":100,"isInProgress":true,"ticketsSold":0,"id":0}
+{"title":"Project Two","releaseYear":2001,"price":120,"isInProgress":true,"ticketsSold":0,"id":1}
+{"title":"Project Three","releaseYear":2003,"price":150,"isInProgress":true,"ticketsSold":0,"id":2}
+{"title":"Project Four","releaseYear":2003,"price":115,"isInProgress":true,"ticketsSold":0,"id":3}
+{"title":"Project Five","releaseYear":2003,"price":180,"isInProgress":true,"ticketsSold":0,"id":4}

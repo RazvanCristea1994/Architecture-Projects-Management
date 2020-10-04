@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ClientController">
+
+    <VBox>
+        <TableView fx:id="tblClients" editable="true" onMouseClicked="#showSelected" prefHeight="400.0" prefWidth="236.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colIdClient" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colFirstName" text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colLastName" text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <TextField fx:id="txtClientFirstName" promptText="First Name " />
+        <TextField fx:id="txtClientLastName" promptText="Last Name " />
+
+        <Button fx:id="btnAddClient" onAction="#btnAddClientClick" prefHeight="25.0" prefWidth="117.0" text="Add Client" />
+        <Button fx:id="btnDeleteClient" onAction="#btnDeleteClientClick" prefHeight="25.0" prefWidth="117.0" text="Delete Client" />
+        <Button fx:id="btnUpdate" onAction="#btnUpdateClick" prefHeight="25.0" prefWidth="117.0" text="Update" />
+        <Button fx:id="btnUndo" onAction="#btnUndoClick" prefHeight="25.0" prefWidth="117.0" text="Undo Add/Delete" />
+    </VBox>
+
+    <VBox GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+        <children>
+          <Label prefHeight="26.0" prefWidth="265.0" text="List of projects this client has bought:">
+              <font>
+                  <Font name="System Bold" size="15.0" />
+              </font>
+          </Label>
+        <ListView fx:id="listClientProjects" prefHeight="375.0" prefWidth="265.0" />
+    </children>
+    </VBox>
+
+</HBox>

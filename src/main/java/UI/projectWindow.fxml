@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ProjectController">
+
+    <VBox>
+        <TableView fx:id="tblProject" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdProject" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colNameProject" text="Project Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colYear" text="Year">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="year" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colPrice" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colIsInProgress" text="Is In Progress">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="IsInProgress" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TextField fx:id="txtProjectTitle" promptText="Title " />
+        <TextField fx:id="txtYear" promptText="Year" />
+        <TextField fx:id="txtPrice" promptText="Price" />
+
+        <CheckBox fx:id="chkIsInProgress" text="Is In Progress" />
+
+        <Button fx:id="btnAddProject" onAction="#btnAddProjectClick" prefHeight="25.0" prefWidth="98.0" text="Add Project" />
+        <Button fx:id="btnDeleteProject" onAction="#btnDeleteProjectClick" prefHeight="25.0" prefWidth="98.0" text="Delete Project" />
+        <Button fx:id="btnUpdate" onAction="#btnUpdateClick" prefHeight="25.0" prefWidth="98.0" text="Update" />
+        <Button fx:id="btnSortByPrice" onAction="#btnSortByPriceClick" prefHeight="25.0" prefWidth="97.0" text="Sort By Price" />
+        <Button fx:id="btnIncreasePrice" onAction="#btnIncreasePriceClick" prefHeight="25.0" prefWidth="97.0" text="Increase Price" />
+
+        <TextField fx:id="txtValueLimit" promptText="Value Limit" />
+        <TextField fx:id="txtValueToIncrease" promptText="Value to Increase" />
+    </VBox>
+
+</HBox>
